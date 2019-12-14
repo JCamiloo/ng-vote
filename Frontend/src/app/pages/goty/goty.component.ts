@@ -1,4 +1,7 @@
+import { GameService } from './../../services/game.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Game } from 'src/app/interfaces/interfaces';
 
 @Component({
   selector: 'app-goty',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GotyComponent implements OnInit {
 
-  constructor() { }
+  games: Observable<Game[]>
+
+  constructor(private gameService: GameService) { }
 
   ngOnInit() {
+    this.games = this.gameService.getGames();
   }
-
 }

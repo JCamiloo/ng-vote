@@ -1,1 +1,3 @@
-<p>goty works!</p>
+<div *ngFor="let game of games | async">
+    <p> {{ game.name }}</p>
+</div>
