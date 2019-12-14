@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ComponentsModule } from './components/components.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { GotyComponent } from './pages/goty/goty.component';
@@ -17,6 +19,8 @@ import { GotyComponent } from './pages/goty/goty.component';
     BrowserModule,
     AppRoutingModule,
     ComponentsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     HttpClientModule
   ],
   providers: [],
