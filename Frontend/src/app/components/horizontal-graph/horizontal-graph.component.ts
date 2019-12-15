@@ -11,11 +11,10 @@ export class HorizontalGraphComponent implements OnDestroy {
   showXAxis = true;
   showYAxis = true;
   gradient = true;
-  showLegend = true;
   showXAxisLabel = true;
-  xAxisLabel = 'Juegos';
+  xAxisLabel = 'Votes';
   showYAxisLabel = true;
-  yAxisLabel = 'Votos';
+  yAxisLabel = 'Games';
   colorScheme = 'nightLights';
 
   constructor() {}

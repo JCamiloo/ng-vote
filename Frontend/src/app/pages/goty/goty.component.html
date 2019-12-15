@@ -5,9 +5,12 @@
 <hr>
 
 <div class="row">
-    <div class="col">
+    <div *ngIf="!(games$ | async)" class="col text-center">
+        <div class="spinner-border text-primary" role="status"> </div>
+    </div>
+    <div class="col" *ngIf="(games$ | async) as games">
         <div class="card-columns">
-            <div class="card bg-dark" *ngFor="let game of games$ | async">
+            <div class="card bg-dark" *ngFor="let game of games">
                 <img [src]="game.url" class="card-img-top" [alt]="game.name">
 
                 <div class="card-body">
